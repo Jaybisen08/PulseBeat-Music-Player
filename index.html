@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseBeat</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <i class="fa-solid fa-wave-square"></i>
+    PulseBeat
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#featured">Tracks</a></li>
+    <li><a href="#playlist">Playlist</a></li>
+  </ul>
+
+  <button id="themeToggle">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Feel The Music. <span>Live The Moment.</span></h1>
+    <p>
+      Dive into your favorite tracks with immersive sound,
+      smooth animations, and premium controls.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="primary-btn">Play Now</button>
+      <button class="secondary-btn">Explore Playlist</button>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/Logo2.png" alt="Album Cover">
+  </div>
+</section>
+
+<!-- FEATURED TRACKS -->
+<section class="featured" id="featured">
+  <h2>Featured Tracks</h2>
+
+  <div class="track-grid">
+
+    <div class="track-card">
+      <img src="images/blue.jpg" alt="">
+      <h3>Blue</h3>
+      <p>Yung Kai</p>
+      <button><i class="fa-solid fa-play"></i></button>
+    </div>
+
+    <div class="track-card">
+      <img src="images/untilifoundyou.jpg" alt="">
+      <h3>Until I Found You</h3>
+      <p>Stephen Sanchez</p>
+      <button><i class="fa-solid fa-play"></i></button>
+    </div>
+
+    <div class="track-card">
+  <img src="images/hymnfortheweekend.jpg" alt="">
+  <h3>Hymn for the Weekend</h3>
+  <p>Coldplay ft. Beyoncé</p>
+  <button><i class="fa-solid fa-play"></i></button>
+</div>
+
+    <div class="track-card">
+      <img src="images/perfect.jpg" alt="">
+      <h3>Perfect</h3>
+      <p>Ed Sheeran</p>
+      <button><i class="fa-solid fa-play"></i></button>
+    </div>
+
+    <div class="track-card">
+      <img src="images/sawarloon.jpg" alt="">
+      <h3>Sawar Loon</h3>
+      <p>Monali Thakur</p>
+      <button><i class="fa-solid fa-play"></i></button>
+    </div>
+
+    <div class="track-card">
+      <img src="images/arz.jpg" alt="">
+      <h3>Arz Kiya Hai </h3>
+      <p>Anuv Jain</p>
+      <button><i class="fa-solid fa-play"></i></button>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAIN PLAYER -->
+<section class="player-section">
+
+  <div class="player-left">
+    <img id="mainCover" src="images/blue.jpg" alt="">
+  </div>
+
+  <div class="player-center">
+    <h2 id="songTitle">Blue</h2>
+    <p id="artistName">Yung Kai</p>
+
+    <div class="progress-container">
+      <span>0:00</span>
+      <input type="range" id="progressBar" value="0">
+      <span>0:00</span>
+    </div>
+
+    <div class="controls">
+      <button><i class="fa-solid fa-backward"></i></button>
+      <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+      <button><i class="fa-solid fa-forward"></i></button>
+    </div>
+
+    <div class="volume-control">
+      <i class="fa-solid fa-volume-high"></i>
+      <input type="range" id="volumeSlider" value="70">
+    </div>
+  </div>
+
+</section>
+
+<!-- PLAYLIST -->
+<section class="playlist" id="playlist">
+  <h2>Your Playlist</h2>
+
+  <div class="playlist-items">
+
+    <div class="playlist-song active">
+      <img src="images/blue.jpg" alt="">
+      <div>
+        <h4>Blue</h4>
+        <p>Yung Kai</p>
+      </div>
+    </div>
+
+    <div class="playlist-song">
+      <img src="images/untilifoundyou.jpg" alt="">
+      <div>
+        <h4>Until I Found You</h4>
+        <p>Stephen Sanchez</p>
+      </div>
+    </div>
+
+   <div class="playlist-song">
+  <img src="images/hymnfortheweekend.jpg" alt="">
+  <div>
+    <h4>Hymn for the Weekend</h4>
+    <p>Coldplay ft. Beyoncé</p>
+  </div>
+</div>
+
+    <div class="playlist-song">
+      <img src="images/perfect.jpg" alt="">
+      <div>
+        <h4>Perfect</h4>
+        <p>Ed Sheeran</p>
+      </div>
+    </div>
+
+    <div class="playlist-song">
+      <img src="images/sawarloon.jpg" alt="">
+      <div>
+        <h4>Sawar Loon</h4>
+        <p>Monali Thakur</p>
+      </div>
+    </div>
+
+    <div class="playlist-song">
+      <img src="images/arz.jpg" alt="">
+      <div>
+        <h4>Arz Kiya Hai</h4>
+        <p>Anuv Jain</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MINI PLAYER -->
+<div class="mini-player">
+  <div class="mini-song">
+    <img src="images/blue.jpg" alt="">
+    <div>
+      <h4>Blue</h4>
+      <p>Now Playing</p>
+    </div>
+  </div>
+
+  <div class="mini-controls">
+    <button><i class="fa-solid fa-backward"></i></button>
+    <button><i class="fa-solid fa-play"></i></button>
+    <button><i class="fa-solid fa-forward"></i></button>
+  </div>
+</div>
+
+<footer>
+  <h3>PulseBeat</h3>
+  <p>Your Ultimate Music Experience</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
